@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+.buttonContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $paddingVerySmll;
+
+  button {
+    padding: $paddingsmll;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: $secondaryFontFam;
+    font-size: 2rem;
+
+    &:hover {
+      filter: brightness(1.5);
+    }
+
+    &:active {
+      filter: brightness(1.2);
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.445);
+    }
+  }
+}

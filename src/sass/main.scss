@@ -1,0 +1,52 @@
+@forward "./resets";
+@forward "./buttons";
+@use "./colors" as *;
+@use "./variables" as *;
+
+body {
+  background-color: $primaryClr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-inline: $paddingBig;
+  color: $secondayClr;
+  font-family: $secondaryFontFam;
+  position: relative;
+}
+
+main {
+  max-width: 400px;
+  margin-top: $paddingsmll;
+  background-color: $secondayClr;
+  padding: $paddingmed;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.445);
+
+  .inputEl {
+    padding: $paddingsmll;
+    max-width: 100%;
+    text-align: end;
+    font-size: 1.5rem;
+    margin-bottom: $paddingsmll;
+    background-color: white;
+    font-family: $secondaryFontFam;
+    font-weight: bold;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: $paddingsmll;
+  font-size: clamp(0.72rem, 2vw, 1rem);
+  text-align: center;
+  opacity: 0.5;
+
+  a {
+    color: $accentClr;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
